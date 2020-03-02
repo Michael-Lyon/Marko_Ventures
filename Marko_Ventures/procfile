@@ -1,0 +1,1 @@
+web: gunicorn Marko_Ventures.wsgi --log-file -

@@ -14,6 +14,10 @@ import os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+# import dj_database_url
+
+
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -26,9 +30,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '!z*bei(t**h*k9mf(_be!+w6p4m63z3ou=6)dg-_95&x^r4t5d'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['markoventures.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
@@ -136,3 +140,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_root')
+
+# DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
