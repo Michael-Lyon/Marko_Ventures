@@ -1,0 +1,106 @@
+.product-header{
+    height: 65vh;
+    overflow: hidden;
+    background:$color-grey-light-1;
+
+   
+    
+    
+
+
+    &__slider{
+        display: flex;
+        background-size: cover;
+        height: 100%;
+        width: 500%;
+        position: relative;
+        animation:  18s slider infinite;
+
+            @for $i from 1 through 4{
+                &--#{$i}{
+                    background-image: linear-gradient(
+                        to right bottom,
+                        rgba($color-secondary,.8)5%,
+                        rgba($color-secondary,.4)40%,
+                        rgba($color-secondary,.4),
+                        rgba($color-secondary,.8)95%),
+                        url("../../images/nat-#{$i + 3}.jpg");
+                        background-position: center;
+                        background-size: cover;
+                        background-position-y:0;
+                    height: 100%;
+                    width: 20%;
+                }
+            }
+
+            &--5{
+                background-image: linear-gradient(
+                    to right bottom,
+                    rgba($color-secondary,.8)5%,
+                    rgba($color-secondary,.4)40%,
+                    rgba($color-secondary,.4),
+                    rgba($color-secondary,.8)95%),
+                    url("../../images/nat-4.jpg");
+                    background-position: center;
+                    background-size: cover;
+                height: 100%;
+                width: 20%;
+            }
+    }
+
+    &__text-box{
+        display: inline-block;
+        @include AbsCenter;
+        z-index: 1000;
+        font-size: 3rem;
+        color: $color-white;
+        text-transform: uppercase;
+    
+    }
+
+    &__text{
+        text-align: center;
+
+        &--main{
+            display: block;
+        }
+
+        &--sub{
+            display: block;
+            font-size: 2rem;
+        }
+    }
+
+}
+.section{
+    width: inherit;
+    background:$color-grey-light-1;
+
+
+    &__products{
+        margin:0 auto;
+        max-width: $grid-width;
+        height: 400px;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        justify-content: center;
+        gap: 3rem;
+        background: red;
+
+        &--1{
+            background: blue;
+        }
+
+        &--2{
+            background: rebeccapurple;
+        }
+
+
+    }
+
+    .products-image{
+        width: 100%;
+    }
+   
+}
+

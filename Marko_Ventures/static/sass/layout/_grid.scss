@@ -1,0 +1,53 @@
+.grid--two{
+    max-width:$grid-width ;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: $gutter-horizontal;
+    grid-template-columns:repeat(2,calc((100% - #{$gutter-horizontal}) / 2)) ;
+
+    @include respond(tab-land){
+        padding: 0 5rem;
+        grid-template-columns:repeat(2,calc((100% - #{$gutter-horizontal}) / 2)) ;
+    }
+
+    @include respond(phone){
+        gap:3rem;
+        padding: 0 3rem;
+    }
+
+    
+    @include respond(smallphone){
+        gap:3rem;
+        padding: 0 3rem;
+        grid-template-columns: 1fr;
+
+    }
+}
+
+
+.grid--four{
+    max-width:95% ;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    gap: 3rem;
+    grid-template-columns:repeat(4,calc((100% - 3 * #{$gutter-horizontal}) / 4)) ;
+   
+
+   
+    @include respond(tab-land){
+       grid-template-columns: 70%;
+    }
+    @include respond(tab-port){
+       
+    }
+    @include respond(phone){
+       
+    }
+}
+
+
+
+
+
+

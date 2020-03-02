@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    {% for item in item %}
+    <h1>{{ item.title }}</h1>
+    <h3>{{ item.description }}</h3>
+    <img src="{{ item.image.url }}" alt="">
+    {{ item.get_category_display }}
+    <a href="{{ item.get_absolute_url }}">Enter</a>
+    {% endfor %}
+  </body>
+</html>

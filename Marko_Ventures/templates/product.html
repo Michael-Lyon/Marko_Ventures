@@ -1,0 +1,14 @@
+{% load cloudinary %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>{{ object.title }}</h1>
+    <h3>{{ object.description }}</h3>
+    <img src="{{ object.image.url }}" alt="">
+    {{ object.get_category_display }}
+  </body>
+</html>

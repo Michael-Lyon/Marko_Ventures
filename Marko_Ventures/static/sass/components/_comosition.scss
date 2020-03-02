@@ -1,0 +1,63 @@
+.composition{
+    position: relative;
+    
+    
+
+    &__photo{
+        width: 55%;
+        box-shadow: 0 1.5rem 4rem rgba($color-shadow, .4);
+        border-radius:  2px;
+        position: absolute;
+        transition: all .3s;
+
+        @include respond(smallphone){
+            width: 33%;
+        }
+
+        &:hover{
+            outline: 1.5rem solid $color-primary;
+            outline-offset: 2rem;
+            transform: scale(1.05) translateY(-.5rem);
+            box-shadow: 0 2.5rem 4rem rgba($color-shadow, .4);
+            z-index: 5;
+            @include respond (phone){
+                outline: 1rem solid $color-primary;
+                outline-offset: 1rem;
+            }            
+
+        }
+
+        &--p1{
+            left: 0;
+            top:-2rem;
+            @include respond (smallphone){
+                left: 8%;
+            }
+
+            
+           
+        }
+        &--p2{
+            left:50%;
+            top:2rem;
+            @include respond (smallphone){
+                top:-2rem;
+                left: 60%;
+            }
+
+        } 
+        &--p3{
+            left:25% ;
+            top:10rem;
+            @include respond (smallphone){
+                top:2rem;
+                left: 34%;
+            }
+        }
+    }
+
+    :hover &__photo:not(:hover){
+        transform: scale(.95);
+    }
+
+}

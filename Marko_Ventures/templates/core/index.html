@@ -1,0 +1,153 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="header" id="home">
+        <div class="header__text-box">
+            <h1 class="heading-primary">
+                <span class="heading-primary--main">Marko Ventures</span>
+                <span class="heading-primary--sub">Lorem ipsum dolor</span>
+            </h1>
+
+        </div>
+    </div>
+
+    <main>
+        <section class="section-about" id="section-about">
+
+           <div class="u-center-text u-margin-bottom--big">
+                <h2 class="heading-secondary">
+                    some crap about the history
+                </h2>
+           </div>
+           <div class="grid--two">
+               <div class="col-1-of-2">
+                    <h2 class="heading-tertiary u-margin-bottom--small">something about mako ventures</h2>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, magnam? Aliquam iure ratione nemo, eaque, vitae laudantium cumque, ullam aspernatur recusandae odio quasi veritatis error. Optio dignissimos placeat molestiae ab!
+                    </p>
+
+                    <h2 class="heading-tertiary u-margin-bottom--small">bla bla venture you won't regret</h2>
+                    <p class="paragraph">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, magnam? Aliquam iure ratione nemo, eaque, vitae laudantium cumque, ullam aspernatur recusandae odio quasi veritatis error. Optio dignissimos placeat molestiae ab!
+                    </p>
+
+                    <a href="#" class="btn--text">learn more &rarr;</a>
+                </div>
+
+              <div class="row">
+                <div class="col-1-of-2">
+                    <div class="composition">
+                        <img src="{% static 'images/marko-index-photo2.jpg' %}" alt="Photo 1" class="composition__photo composition__photo--p1"/>
+                        <img src="{% static 'images/marko-photo4.jpg' %}" alt="Photo 2" class="composition__photo composition__photo--p2"/>
+                        <img src="{% static 'images/marko-photo6.jpg' %}" alt="Photo 3" class="composition__photo composition__photo--p3"/>
+                     </div>
+                 </div>
+              </div>
+           </div>
+        </section>
+
+        <section class="section-products" id="section-products">
+
+            <div class="u-center-text u-margin-bottom--big">
+                <h2 class="heading-secondary">
+                    some of our products
+                </h2>
+           </div>
+
+            <div class="row u-margin-bottom--big">
+                <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--1">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--1"> Heading Crop</span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, illo aliquid ipsam nobis accusantium ratione quas adipisci eum commodi vel aspernatur laborum quos quam sed consequuntur, perferendis rem, obcaecati libero?
+                               </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+                 <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--2">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--2"> Heading Crop</span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
+                                illo aliquid ipsam nobis accusantium ratione quas adipisci eum commodi
+                                vel aspernatur laborum quos quam sed consequuntur, perferendis rem, obcaecati libero?
+                               </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+                 <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--3">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--3"> Heading Crop</span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, illo aliquid ipsam nobis accusantium ratione quas adipisci eum commodi vel aspernatur laborum quos quam sed consequuntur, perferendis rem, obcaecati libero?
+                               </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+                 <div class="col-1-of-4">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--4">
+                                &nbsp;
+                            </div>
+
+                            <h4 class="card__heading">
+                                <span class="card__heading-span--4"> Heading Crop</span>
+                                </h4>
+
+                            <div class="card__details">
+                               <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, illo aliquid ipsam nobis accusantium ratione quas adipisci eum commodi vel aspernatur laborum quos quam sed consequuntur, perferendis rem, obcaecati libero?
+                               </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                 </div>
+            </div>
+
+            <div class="u-center-text ">
+                <a href="#" class="btn btn--green btn--cta btn--animated">Discover More</a>
+            </div>
+
+        </section>
+    </main>
+    {% include 'core/footer.html'%}
+    {% endblock content %}

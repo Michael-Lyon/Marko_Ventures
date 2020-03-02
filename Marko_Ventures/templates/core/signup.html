@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="section-book" id="section-book">
+        <div class="row">
+            <div class="book">
+                  {{ form.errors }}
+                <div class="book__form">
+                    <form action="#" class="form2" method='post'>
+                      {% csrf_token %}
+                      <div class="u-center-text u-margin-bottom--small">
+                          <h2 class="heading-secondary">
+                              Sign up now
+                          </h2>
+                      </div>
+                    <div class="form2__group u-margin-bottom--smallest">
+                        <input type="text" name="username" class="form2__input" placeholder="Username" id="uname" required>
+                        <label for="uname" class="form2__label">Username</label>
+                    </div>
+
+                      <div class="form2__group u-margin-bottom--smallest">
+                          <input type="email" name="email" class="form2__input" placeholder="Email address" id="email" required>
+                          <label for="email" class="form2__label">Email address</label>
+                      </div>
+                      <div class="form2__group u-margin-bottom--smallest">
+                          <input type="password" name="password1" class="form2__input" placeholder="Password" id="pass" required>
+                          <label for="pass" class="form2__label">Password</label>
+                      </div>
+                      <div class="form2__group u-margin-bottom--smallest">
+                          <input type="password" name="password2" class="form2__input" placeholder="Re-enter password" id="pass2" required>
+                          <label for="pass2" class="form2__label">Confirm password</label>
+                      </div>
+
+                      <div class="form2__group ">
+                          <span class="form2__sign-up-anchor"><a href="{% url 'core:login' %}">I have an account already</a></span>
+                      </div>
+
+                      <div class="form2-group">
+                          <button class="btn btn--green btn--animated" type="submit">Get started &rarr;</button>
+                      </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

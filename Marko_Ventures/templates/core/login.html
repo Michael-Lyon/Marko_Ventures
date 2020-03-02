@@ -1,0 +1,40 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+    <section class="section-book" id="section-book">
+        <div class="row">
+            <div class="book">
+                <div class="book__form">
+                  {% for message in messages %}
+                      <p>{{ message }}</p>
+                  {% endfor %}
+                  <form class="" action="{% url 'core:login' %}" method="post">
+                    {% csrf_token %}
+                      <div class="u-center-text u-margin-bottom--medium">
+                          <h2 class="heading-secondary">
+                              Login
+                          </h2>
+                      </div>
+                    <div class="form__group">
+                        <input type="text" name="username" class="form__input" placeholder="Username" id="uname" required>
+                        <label for="uname" class="form__label">Username</label>
+                    </div>
+
+                      <div class="form__group u-margin-bottom--smallest">
+                          <input type="password" name="password" class="form__input" placeholder="Password" id="pass" required>
+                          <label for="pass" class="form__label">Password</label>
+                      </div>
+
+                      <div class="form__group ">
+                          <span class="form__sign-up-anchor"><a href="{% url 'core:signup' %}">I dont have an account yet</a></span>
+                      </div>
+
+                      <div class="form-group">
+                          <button class="btn btn--green btn--animated" type="submit">Login &rarr;</button>
+                      </div>
+                  </form>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
