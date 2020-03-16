@@ -5,5 +5,5 @@ cache: pip
 install:
   - pip install -r requirements.txt
 script:
-  - /Marko_Ventures/ python manage.py test core
+  - ./Marko_Ventures/ python manage.py test core
   # - coverage run --source='core' manage.py test
