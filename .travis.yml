@@ -7,5 +7,5 @@ install:
 env:
   -
 script:
-  - ./Marko_Ventures/python manage.py test core
+  - ./Marko_Ventures/manage.py test core
   # - coverage run --source='core' manage.py test
