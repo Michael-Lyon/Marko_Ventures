@@ -8,4 +8,5 @@ env:
   -
 script:
   - python Marko_Ventures/manage.py test core
-  - coverage run --source='core' Marko_Ventures/manage.py test
+  - coverage run --source='Marko_Ventures/core' Marko_Ventures/manage.py test core
+  - coverage report
