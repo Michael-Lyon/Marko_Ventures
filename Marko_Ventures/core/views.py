@@ -57,14 +57,16 @@ def signupPage(request):
             elif User.objects.filter(email=email).exists():
                 messages.info(request, 'Email Address Already Exist')
             else:
-                user = User.objects.create_user(username=username, email=email, password=password1)
+                user = User.objects.create_user(
+                    username=username, email=email, password=password1)
                 user.save()
-                messages.info(request, 'Congrats!! Account created for ' + username)
+                messages.info(
+                    request, 'Congrats!! Account created for ' + username)
                 return redirect('core:login')
 
         else:
             messages.info(request, 'Passwords do not match')
-            return redirect('core:login')
+            return redirect('core:signup')
         return redirect('/')
 
     else:
